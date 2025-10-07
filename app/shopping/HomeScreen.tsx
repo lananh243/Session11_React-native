@@ -1,15 +1,14 @@
-import { useRouter } from 'expo-router'
+import { router } from 'expo-router'
 import React from 'react'
 import { Button, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 export default function HomeScreen() {
-    const route = useRouter();
   return (
     <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to Mini Shop !</Text>
         <Text style={styles.text}>Find the best products here</Text>
         <Image style={styles.image} source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAqEDT0bJVjBM0CeYq__9BJUazVv5qKZTojw&s'}}/>
-        <TouchableOpacity style={styles.button} onPress={() => route.push("/bai1/ProductListScreen")} >
+        <TouchableOpacity style={styles.button} onPress={() => router.push("/shopping/ProductListScreen")} >
             <Text style={styles.buttonText}>Brower All Products</Text>
         </TouchableOpacity>
     </View>
